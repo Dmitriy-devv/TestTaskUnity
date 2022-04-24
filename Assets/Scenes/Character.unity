@@ -937,7 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4883342900094367}
   m_Layer: 0
-  m_Name: BoneRoot
+  m_Name: girlBone_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,7 +2772,7 @@ Transform:
   m_GameObject: {fileID: 1286966428723387}
   m_LocalRotation: {x: -8.368688e-17, y: -0.000000001465209, z: 0.000000048571064, w: 1}
   m_LocalPosition: {x: 0.00000005851111, y: 0.004617133, z: 0.00016599311}
-  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354116048199641}
   m_Father: {fileID: 4203471195686435}
@@ -2924,7 +2924,7 @@ Animator:
   m_GameObject: {fileID: 1003329885602463}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ebaf91e845e67ac4f85b03ca6c72bd32, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5aeb6b01b37804468aaa2fc46c008fa, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
