@@ -10,7 +10,7 @@ public class Initializer : MonoBehaviour
     [SerializeField] private Player _playerPrefab;
     public void Start()
     {
-        var input = new GameObject("InputHandler").AddComponent<InputHandler>();
+        var input = new GameObject("InputHandler").AddComponent<KeyboardInputHandler>();
 
         //Player
         var player = Instantiate(_playerPrefab);

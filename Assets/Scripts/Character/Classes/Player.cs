@@ -4,21 +4,19 @@ using UnityEngine;
 
 namespace Character
 {
-    //[RequireComponent(typeof(CharacterController))]
+
     public class Player : MonoBehaviour, ICharacter
     {
-        private ICharacterMovement _movement;
-        private CharacterController _characterController;
-
-        public Player()
-        {
-
-            //_characterController = GetComponent<CharacterController>();
-        }
+        [SerializeField] private PlayerCamera _camera;
 
         public void Init()
         {
-            
+            _camera.Init();
+        }
+
+        private void LateUpdate()
+        {
+            transform.localRotation = Quaternion.Euler(_camera.GetHorizontalRotation());
         }
 
 

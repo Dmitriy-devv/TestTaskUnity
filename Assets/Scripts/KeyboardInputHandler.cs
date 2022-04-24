@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputHandler : MonoBehaviour, IInput
+public class KeyboardInputHandler : MonoBehaviour, IInput
 {
     private readonly string verticalInput = "Vertical";
     private readonly string horizontalInput = "Horizontal";
