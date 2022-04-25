@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a8fe6b417b69d44a7b57cceb8b9785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _meshTransform: {fileID: 6742535301992129285}
   CharacterTypeSO: {fileID: 11400000, guid: 6a475393baefb5b4babc141804655e18, type: 2}
 --- !u!1 &6742414386800496697
 GameObject:
@@ -584,6 +585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535301232938992}
+  - component: {fileID: 1564893162283873626}
   m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
@@ -607,6 +609,22 @@ Transform:
   m_Father: {fileID: 6742535301992129285}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1564893162283873626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742535301232938895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ee60e48b822df49b1d8ada4a0d2983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothType: 1
+  _naked: {fileID: 6664085963573954147}
+  _dressed: {fileID: 6664150788158092705}
+  _isDressed: 0
 --- !u!1 &6742535301992129284
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535302479577288}
+  - component: {fileID: 8317025338653452386}
   m_Layer: 6
   m_Name: Boots
   m_TagString: Untagged
@@ -675,6 +694,22 @@ Transform:
   m_Father: {fileID: 6742535301992129285}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8317025338653452386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742535302479577287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ee60e48b822df49b1d8ada4a0d2983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothType: 3
+  _naked: {fileID: 6663762682183511663}
+  _dressed: {fileID: 6664051567177089727}
+  _isDressed: 0
 --- !u!1 &6742535302772312132
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535302772312133}
+  - component: {fileID: 5418461389847934260}
   m_Layer: 6
   m_Name: Pants
   m_TagString: Untagged
@@ -707,6 +743,22 @@ Transform:
   m_Father: {fileID: 6742535301992129285}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5418461389847934260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742535302772312132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ee60e48b822df49b1d8ada4a0d2983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clothType: 2
+  _naked: {fileID: 6663154485311986143}
+  _dressed: {fileID: 6663948773159733481}
+  _isDressed: 0
 --- !u!1 &6743030416784525685
 GameObject:
   m_ObjectHideFlags: 0

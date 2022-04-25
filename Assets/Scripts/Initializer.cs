@@ -15,12 +15,16 @@ public class Initializer : MonoBehaviour
 
         
         var info = Instantiate(_playerPrefab);
+
+        var targetCamera = Instantiate(_targetCamera, info.transform);
+        targetCamera.Init(info.CharacterTypeSO.CharacterData);
+
         //Player
         var player = info.gameObject.AddComponent<Player>();
         player.Init();
 
-        var targetCamera = Instantiate(_targetCamera, player.transform);
-        targetCamera.Init(info.CharacterTypeSO.CharacterData);
+        var clothPicker = player.gameObject.AddComponent<SimplePlayerClothPicker>();
+        clothPicker.Init(info, input, targetCamera.GetCamera());
 
         var rotater = player.gameObject.AddComponent<PlayerCameraRotater>();
         rotater.Init(input, player, targetCamera);

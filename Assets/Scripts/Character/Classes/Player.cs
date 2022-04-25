@@ -23,6 +23,7 @@ namespace Character
             _characterController = GetComponent<CharacterController>();
         }
 
+
     }
 }
 
