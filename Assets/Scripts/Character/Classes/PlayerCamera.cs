@@ -9,6 +9,8 @@ namespace Character
         [SerializeField] private TargetCamera _target;
         [SerializeField] private float _sensitivity;
         [SerializeField] private float maxYAngle = 90f;
+        [SerializeField] private float maxDistanceZoom = 5f;
+        [SerializeField] private float minDistanceZoom = 1f;
 
         private float _yRotation = 0f;
         private float _xRotation = 0f;
@@ -47,6 +49,17 @@ namespace Character
         {
             return Vector3.right * _yRotation;
         }
+
+        public void SetDistance(float distance)
+        {
+            var pos = transform.localPosition;
+            transform.localPosition = new Vector3(pos.x, pos.y, -distance);
+        }
+
+        public float GetMinDistance() => minDistanceZoom;
+        public float GetMaxDistance() => maxDistanceZoom;
+        public float GetCurrentDistance() => -transform.localPosition.z;
+
 
     }
 }

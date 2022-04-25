@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,4 +13,8 @@ public class KeyboardInputHandler : MonoBehaviour, IInput
     public float HorizontalAcceleration { get => Input.GetAxis(horizontalInput); }
 
     public bool IsCameraFreeLook => Input.GetMouseButton(freeLookMouseButton);
+
+    public float WheelAcceleration => Input.mouseScrollDelta.y;
+
+
 }

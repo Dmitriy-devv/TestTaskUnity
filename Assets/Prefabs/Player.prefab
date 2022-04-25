@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738094512077541603}
   - component: {fileID: 6663713301787710411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535301232938992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535301992129285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535302479577288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,7 +684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6742535302772312133}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6737960721014594281}
   - component: {fileID: 6663948773159733481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VillagePants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6745295290086063099}
   - component: {fileID: 6664051567177089727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VillageBoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1483,7 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738451983495876635}
   - component: {fileID: 6664085963573954147}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NakedBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6745663781374827765}
   - component: {fileID: 6662276328722761969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2036,7 +2036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6745451205190102839}
   - component: {fileID: 6664150788158092705}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VillageBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2447,7 +2447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738060356486796345}
   - component: {fileID: 6663762682183511663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NakedBoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2536,7 +2536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738071101133373469}
   - component: {fileID: 6663154485311986143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NakedPants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2689,7 +2689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6738334217776704641}
   - component: {fileID: 6664155261332980713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}

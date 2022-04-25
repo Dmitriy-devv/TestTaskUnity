@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SimpleMovement;
+using Character.SimpleMovement;
 using Character;
 
 
@@ -25,7 +25,10 @@ public class Initializer : MonoBehaviour
         var rotater = player.gameObject.AddComponent<PlayerCameraRotater>();
         rotater.Init(input, player, targetCamera);
 
-        var movement = player.gameObject.AddComponent<SimpleMovement.SimpleMovement>();
+        var zoom = player.gameObject.AddComponent<PlayerCameraZoom>();
+        zoom.Init(input, targetCamera);
+
+        var movement = player.gameObject.AddComponent<SimpleMovement>();
         movement.Init(input, player);
 
     }

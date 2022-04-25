@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Character;
 
-namespace SimpleMovement
+namespace Character.SimpleMovement
 {
     public class SimpleMovement : MonoBehaviour, ICharacterMovement
     {
