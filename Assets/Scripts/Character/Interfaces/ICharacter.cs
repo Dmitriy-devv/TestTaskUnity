@@ -6,6 +6,6 @@ namespace Character
 {
     public interface ICharacter
     {
-        
+        public Transform Transform { get; }
     }
 }

@@ -7,13 +7,12 @@ namespace Character
 
     public class Player : MonoBehaviour, ICharacter
     {
-        
+        public Transform Transform => transform;
+
         public void Init()
         {
             
         }
-
-
 
     }
 }

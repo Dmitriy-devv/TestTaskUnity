@@ -10,7 +10,7 @@ namespace Character
         [SerializeField] private float _sensitivity;
         [SerializeField] private float maxYAngle = 90f;
 
-        private float _yRotation = 30f;
+        private float _yRotation = 0f;
         private float _xRotation = 0f;
 
         private bool _isInit;
@@ -41,6 +41,11 @@ namespace Character
         public Vector3 GetHorizontalRotation()
         {
             return Vector3.up * _xRotation;
+        }
+
+        public Vector3 GetVerticalRotation()
+        {
+            return Vector3.right * _yRotation;
         }
 
     }
