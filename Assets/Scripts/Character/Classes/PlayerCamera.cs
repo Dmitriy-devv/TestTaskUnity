@@ -22,7 +22,7 @@ namespace Character
             _isInit = true;
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             if (!_isInit) return;
 
@@ -35,7 +35,7 @@ namespace Character
 
             transform.LookAt(_target.transform);
 
-            _target.transform.localRotation = Quaternion.Euler(_yRotation, _xRotation, 0f);
+            //_target.transform.localRotation = Quaternion.Euler(_yRotation, _xRotation, 0f);
         }
 
         public Vector3 GetHorizontalRotation()

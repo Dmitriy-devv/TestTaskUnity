@@ -34,6 +34,5 @@ namespace SimpleMovement
             _state = _state.Update();
         }
 
-        
     }
 }
