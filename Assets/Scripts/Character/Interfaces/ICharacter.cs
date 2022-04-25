@@ -7,5 +7,8 @@ namespace Character
     public interface ICharacter
     {
         public Transform Transform { get; }
+
+        public CharacterAnimator CharacterAnimator { get;}
+        public CharacterController CharacterController { get;}
     }
 }

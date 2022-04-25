@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Character;
 
 namespace SimpleMovement
 {
@@ -9,16 +10,16 @@ namespace SimpleMovement
         private SimpleMovement _movement;
         private IInput _input;
         private CharacterController _controller;
-        private Animator _animator;
+        private CharacterAnimator _animator;
 
-        public WalkState(IInput input, CharacterController controller, Animator animator, SimpleMovement movement)
+        public WalkState(IInput input, CharacterController controller, CharacterAnimator animator, SimpleMovement movement)
         {
             _movement = movement; 
             _input = input;
             _controller = controller;
             _animator = animator;
 
-            _animator.SetBool("Walk", true);
+            _animator.SetWalk(true);
         }
 
         public ISimpleMovementState Update()

@@ -26,7 +26,7 @@ public class Initializer : MonoBehaviour
         rotater.Init(input, player, targetCamera);
 
         var movement = player.gameObject.AddComponent<SimpleMovement.SimpleMovement>();
-        movement.Init(input);
+        movement.Init(input, player);
 
     }
 }

@@ -11,18 +11,18 @@ namespace SimpleMovement
         public float Speed { get => testSpeed; }
 
         private IInput _input;
-        private Animator _animator;
+        private CharacterAnimator _animator;
         private CharacterController _characterController;
         private ISimpleMovementState _state;
 
         private bool _isInit = false;
 
-        public void Init(IInput input)
+        public void Init(IInput input, ICharacter character)
         {
             
             _input = input;
-            _animator = GetComponent<Animator>();
-            _characterController = GetComponent<CharacterController>();
+            _animator = character.CharacterAnimator;
+            _characterController = character.CharacterController;
 
             _state = new IdleState(_input,_characterController, _animator, this);
             _isInit = true;
