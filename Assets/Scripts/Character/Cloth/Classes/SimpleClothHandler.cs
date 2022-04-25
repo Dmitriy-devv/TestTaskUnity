@@ -55,7 +55,9 @@ namespace Character
         {
             if (_clothPicker == null) return;
 
-            _clothHandlerUI.transform.LookAt(_clothPicker.GetCameraPosition());
+            var direction = _clothPicker.GetCameraPosition() - _clothHandlerUI.transform.position;
+            var lookPoint = _clothHandlerUI.transform.position - direction;
+            _clothHandlerUI.transform.LookAt(lookPoint);
 
         }
     }
