@@ -15,12 +15,13 @@ namespace Character
         private float _currentDistance;
         private float _speed = 10f;
 
-        public void Init(IInput input, TargetCamera targetCamera)
+        public void Init(IInput input, TargetCamera targetCamera, PlayerSettings playerSettings)
         {
             _input = input;
             _targetCamera = targetCamera;
             _camera = targetCamera.GetCamera();
-            
+            _speed = playerSettings.cameraZoomSpeed;
+
             _maxDistance = _camera.GetMaxDistance();
             _minDistance = _camera.GetMinDistance();
             _currentDistance = _camera.GetCurrentDistance();

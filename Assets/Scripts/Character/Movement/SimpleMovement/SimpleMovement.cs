@@ -7,7 +7,7 @@ namespace Character.SimpleMovement
 {
     public class SimpleMovement : MonoBehaviour, ICharacterMovement
     {
-        [SerializeField] private float testSpeed = 2;
+        [SerializeField] private float testSpeed = 1.7f;
         public float Speed { get => testSpeed; }
 
         private IInput _input;

@@ -9343,6 +9343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 7433938016902772019, guid: 88fa341ed3094144fab808c71495d34e, type: 3}
+  _playerSettingsSO: {fileID: 11400000, guid: a390d2afb7bd4594f9df19e18ffe7b16, type: 2}
   _targetCamera: {fileID: 1738455187497523101, guid: e12089d5c500c4a48b9a1ccf8f8c32bf, type: 3}
 --- !u!4 &2133752068
 Transform:

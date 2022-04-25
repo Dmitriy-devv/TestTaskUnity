@@ -17,9 +17,10 @@ namespace Character
 
         private bool _isInit;
 
-        public void Init()
+        public void Init(PlayerSettings playerSettings)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            _sensitivity = playerSettings.cameraSensetivity;
 
             _isInit = true;
         }
