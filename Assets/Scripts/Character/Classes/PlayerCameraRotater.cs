@@ -31,10 +31,11 @@ namespace Character
 
             if (!_input.IsCameraFreeLook)
             {
-                _character.Transform.rotation = Quaternion.Euler(_camera.GetHorizontalRotation());
+                _character.Transform.localRotation = Quaternion.Euler(_camera.GetHorizontalRotation());
                 return;
             }
 
+            _targetCamera.transform.localRotation = Quaternion.Euler(_camera.GetHorizontalRotation());
         }
     }
 }
