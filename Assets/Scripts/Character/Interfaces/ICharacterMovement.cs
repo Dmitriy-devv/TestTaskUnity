@@ -6,7 +6,7 @@ namespace Character
 {
     public interface ICharacterMovement
     {
-        
+        public float Speed { get;}
     }
 }
 

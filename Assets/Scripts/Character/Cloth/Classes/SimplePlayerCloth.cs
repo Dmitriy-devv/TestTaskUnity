@@ -10,7 +10,7 @@ namespace Character
         [SerializeField] private SkinnedMeshRenderer _naked;
         [SerializeField] private SkinnedMeshRenderer _dressed;
 
-        [SerializeField] private bool _isDressed;
+        private bool _isDressed;
 
         public bool IsDressed => _isDressed;
 
@@ -22,5 +22,6 @@ namespace Character
             _naked.gameObject.SetActive(!state);
             _isDressed = state;
         }
+
     }
 }

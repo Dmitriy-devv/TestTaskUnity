@@ -7,26 +7,24 @@ namespace Character.SimpleMovement
 {
     public class WalkState : ISimpleMovementState
     {
-        private SimpleMovement _movement;
+        private ICharacterMovement _movement;
         private IInput _input;
-        private CharacterController _controller;
-        private CharacterAnimator _animator;
+        private ICharacter _character;
 
-        public WalkState(IInput input, CharacterController controller, CharacterAnimator animator, SimpleMovement movement)
+        public WalkState(IInput input, ICharacter character, ICharacterMovement movement)
         {
             _movement = movement; 
             _input = input;
-            _controller = controller;
-            _animator = animator;
+            _character = character;
 
-            _animator.SetWalk(true);
+            _character.CharacterAnimator.SetWalk(true);
         }
 
         public ISimpleMovementState Update()
         {
             if (!(Mathf.Abs(_input.HorizontalAcceleration) > 0.05f || Mathf.Abs(_input.VerticalAcceleration) > 0.05f))
             {
-                return new IdleState(_input, _controller, _animator, _movement);
+                return new IdleState(_input, _character, _movement);
             }
 
             Move();
@@ -35,10 +33,10 @@ namespace Character.SimpleMovement
 
         private void Move()
         {
-            var horizontal = _input.HorizontalAcceleration * _controller.transform.right;
-            var vertical = _input.VerticalAcceleration * _controller.transform.forward;
+            var horizontal = _input.HorizontalAcceleration * _character.CharacterController.transform.right;
+            var vertical = _input.VerticalAcceleration * _character.CharacterController.transform.forward;
             var motion = (horizontal + vertical).normalized * Time.deltaTime * _movement.Speed;
-            _controller.Move(motion);
+            _character.CharacterController.Move(motion);
         }
     }
 }

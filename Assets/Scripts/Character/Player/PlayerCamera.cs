@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 namespace Character
 {
@@ -14,14 +15,13 @@ namespace Character
 
         private float _yRotation = 0f;
         private float _xRotation = 0f;
-
+        private IInput _input;
         private bool _isInit;
 
-        public void Init(PlayerSettings playerSettings)
+        public void Init(PlayerSettings playerSettings, IInput input)
         {
-            Cursor.lockState = CursorLockMode.Locked;
             _sensitivity = playerSettings.cameraSensetivity;
-
+            _input = input;
             _isInit = true;
         }
 
@@ -29,8 +29,8 @@ namespace Character
         {
             if (!_isInit) return;
 
-            var mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-            var mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
+            var mouseX = _input.CameraX * _sensitivity * Time.deltaTime;
+            var mouseY = _input.CameraY * _sensitivity * Time.deltaTime;
 
             _xRotation += mouseX;
             _yRotation -= mouseY;
@@ -38,7 +38,6 @@ namespace Character
 
             transform.LookAt(_target.transform);
 
-            //_target.transform.localRotation = Quaternion.Euler(_yRotation, _xRotation, 0f);
         }
 
         public Vector3 GetHorizontalRotation()

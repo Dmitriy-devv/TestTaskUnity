@@ -7,26 +7,24 @@ namespace Character.SimpleMovement
 {
     public class IdleState : ISimpleMovementState
     {
-        private SimpleMovement _movement;
+        private ICharacterMovement _movement;
         private IInput _input;
-        private CharacterController _controller;
-        private CharacterAnimator _animator;
+        private ICharacter _character;
 
-        public IdleState(IInput input, CharacterController controller, CharacterAnimator animator, SimpleMovement movement)
+        public IdleState(IInput input, ICharacter character, ICharacterMovement movement)
         {
             _movement = movement;
             _input = input;
-            _controller = controller;
-            _animator = animator;
+            _character = character;
 
-            _animator.SetWalk(false);
+            _character.CharacterAnimator.SetWalk(false);
         }
 
         public ISimpleMovementState Update()
         { 
             if (Mathf.Abs(_input.HorizontalAcceleration) > 0.05f || Mathf.Abs(_input.VerticalAcceleration) > 0.05f)
             {
-                return new WalkState(_input, _controller, _animator, _movement);
+                return new WalkState(_input, _character, _movement);
             }
             return this;
         }

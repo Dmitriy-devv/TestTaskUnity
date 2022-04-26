@@ -22,6 +22,7 @@ namespace Mirror
         public static Dictionary<int, NetworkConnectionToClient> connections =
             new Dictionary<int, NetworkConnectionToClient>();
 
+
         /// <summary>Message Handlers dictionary, with mesageId as key</summary>
         internal static Dictionary<ushort, NetworkMessageDelegate> handlers =
             new Dictionary<ushort, NetworkMessageDelegate>();

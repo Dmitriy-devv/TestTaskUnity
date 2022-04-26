@@ -9,6 +9,8 @@ public interface IInput
 
     public float VerticalAcceleration { get;}
     public float HorizontalAcceleration { get;}
+    public float CameraX { get;}
+    public float CameraY { get;}
     public float WheelAcceleration { get;}
     public bool IsCameraFreeLook { get; }
 
