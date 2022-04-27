@@ -10,13 +10,11 @@ namespace Character
     {
         private IInput _input;
         private IClothHandler _clothHandler;
-        private PlayerCamera _camera;
         private List<IPlayerCloth> _playerCloths;
 
-        public void Init(ICharacter character, IInput input, PlayerCamera camera = null)
+        public void Init(ICharacter character, IInput input)
         {
             _input = input;
-            _camera = camera;
             _playerCloths = character.Transform.GetComponentsInChildren<IPlayerCloth>().ToList();
             
             if (isLocalPlayer) _input.OnClothPick += ClothPick;
@@ -49,11 +47,6 @@ namespace Character
             {
                 cloth.SetCloth(!cloth.IsDressed);
             }
-        }
-
-        public Vector3 GetCameraPosition()
-        {
-            return _camera.transform.position;
         }
 
         public KeyCode GetPickButton()

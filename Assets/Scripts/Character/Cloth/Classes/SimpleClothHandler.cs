@@ -50,15 +50,5 @@ namespace Character
         {
             return _clothType;
         }
-
-        private void Update()
-        {
-            if (_clothPicker is null) return;
-            
-            var direction = _clothPicker.GetCameraPosition() - _clothHandlerUI.transform.position;
-            var lookPoint = _clothHandlerUI.transform.position - direction;
-            _clothHandlerUI.transform.LookAt(lookPoint);
-
-        }
     }
 }

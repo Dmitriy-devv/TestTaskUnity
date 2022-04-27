@@ -35,19 +35,17 @@ namespace Character
             var animator = GetComponent<Animator>();
             _characterAnimator = new CharacterAnimator(animator);
 
+            var clothPickerLocal = GetComponent<NetworkClothPicker>();
+            clothPickerLocal.Init(this, _input);
+
             if (!isLocalPlayer)
             {
-                var clothPickerLocal = GetComponent<NetworkClothPicker>();
-                clothPickerLocal.Init(this, _input);
                 Destroy(_characterController);
                 return;
             }
             
             var targetCamera = Instantiate(_targetCamera, transform);
             targetCamera.Init(_info.CharacterTypeSO.CharacterData, playerSettings, _input);
-
-            var clothPicker = GetComponent<NetworkClothPicker>();
-            clothPicker.Init(this, _input, targetCamera.GetCamera());
 
             var rotater = gameObject.AddComponent<PlayerCameraRotater>();
             rotater.Init(_input, this, targetCamera);

@@ -6,7 +6,6 @@ namespace Character
 {
     public interface IPlayerClothPicker
     {
-        public Vector3 GetCameraPosition();
         public KeyCode GetPickButton();
 
         public void SetClothHandler(IClothHandler clothHandler);
