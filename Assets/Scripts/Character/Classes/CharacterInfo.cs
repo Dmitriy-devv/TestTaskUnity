@@ -6,9 +6,6 @@ namespace Character
 {
     public class CharacterInfo : MonoBehaviour
     {
-        [SerializeField] private Transform _meshTransform;
-
         public CharacterTypeSO CharacterTypeSO;
-        public Transform MeshTransform => _meshTransform;
     }
 }

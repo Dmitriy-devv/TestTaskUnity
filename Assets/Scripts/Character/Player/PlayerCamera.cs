@@ -39,17 +39,17 @@ namespace Character
             transform.LookAt(_target.transform);
 
         }
-
+        //Get current horizontal rotation
         public Vector3 GetHorizontalRotation()
         {
             return Vector3.up * _xRotation;
         }
-
+        //Get current vertical rotation
         public Vector3 GetVerticalRotation()
         {
             return Vector3.right * _yRotation;
         }
-
+        //Set zoom distance to camera
         public void SetDistance(float distance)
         {
             var pos = transform.localPosition;

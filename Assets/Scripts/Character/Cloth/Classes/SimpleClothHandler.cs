@@ -21,9 +21,7 @@ namespace Character
         {
             _triggerZone.OnEnter += OnEnterTrigger;
             _triggerZone.OnExit += OnExitTrigger;
-            _triggerZone.Init();
 
-            _clothHandlerUI.Init();
             _clothHandlerUI.SetCloth(_clothType);
             _clothHandlerUI.SetActive(false);
 
@@ -46,6 +44,7 @@ namespace Character
             _clothPicker = null;
         }
 
+        //Get the cloth type
         public ClothType GetCloth()
         {
             return _clothType;

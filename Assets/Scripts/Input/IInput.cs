@@ -6,7 +6,6 @@ using System;
 public interface IInput
 {
     public event Action OnClothPick;
-
     public float VerticalAcceleration { get;}
     public float HorizontalAcceleration { get;}
     public float CameraX { get;}

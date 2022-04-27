@@ -26,6 +26,7 @@ public class KeyboardInputHandler : NetworkBehaviour, IInput
 
     public event Action OnClothPick;
 
+    //Get the current keycode to pick cloth
     public KeyCode GetPickClothKeycode()
     {
         return clothPick;

@@ -10,7 +10,6 @@ namespace Character
     {
         public Transform Transform => transform;
         public CharacterAnimator CharacterAnimator => _characterAnimator;
-
         public CharacterController CharacterController => _characterController;
 
         [SerializeField] private TargetCamera _targetCamera;
@@ -56,7 +55,7 @@ namespace Character
             zoom.Init(_input, targetCamera, playerSettings);
 
             var movement = gameObject.AddComponent<SimpleNetworkMovement>();
-            movement.Init(_input, this);
+            movement.Init(_input, this, _info.CharacterTypeSO.CharacterData);
 
         }
     }

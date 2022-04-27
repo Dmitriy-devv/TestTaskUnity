@@ -13,14 +13,14 @@ namespace Character
         private float _maxDistance;
         private float _minDistance;
         private float _currentDistance;
-        private float _speed = 10f;
+        private float _speedZoom = 10f;
 
         public void Init(IInput input, TargetCamera targetCamera, PlayerSettings playerSettings)
         {
             _input = input;
             _targetCamera = targetCamera;
             _camera = targetCamera.GetCamera();
-            _speed = playerSettings.cameraZoomSpeed;
+            _speedZoom = playerSettings.cameraZoomSpeed;
 
             _maxDistance = _camera.GetMaxDistance();
             _minDistance = _camera.GetMinDistance();
@@ -30,7 +30,7 @@ namespace Character
 
         private void Update()
         {
-            _currentDistance -= _input.WheelAcceleration * Time.deltaTime * _speed;
+            _currentDistance -= _input.WheelAcceleration * Time.deltaTime * _speedZoom;
             _currentDistance = Mathf.Clamp(_currentDistance, _minDistance, _maxDistance);
             
 

@@ -16,6 +16,7 @@ namespace Character
 
         public ClothType ClothType => _clothType;
 
+        //Set the cloth: true - dressed, false - naked
         public void SetCloth(bool state)
         {
             _dressed.gameObject.SetActive(state);

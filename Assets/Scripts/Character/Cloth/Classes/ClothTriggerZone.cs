@@ -8,13 +8,10 @@ namespace Character
 {
     public class ClothTriggerZone : MonoBehaviour
     {
+        //On enter in trigger zone
         public event Action<IPlayerClothPicker> OnEnter;
+        //On exit in trigger zone
         public event Action<IPlayerClothPicker> OnExit;
-
-        public void Init()
-        {
-
-        }
 
         private void OnTriggerEnter(Collider other)
         {

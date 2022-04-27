@@ -15,7 +15,8 @@ namespace Character
             _animator = animator;
             _isWalkingHash = Animator.StringToHash(_walkBool);
         }
-
+        
+        //Set walk state in animator
         public void SetWalk(bool state)
         {
             _animator.SetBool(_isWalkingHash, state);

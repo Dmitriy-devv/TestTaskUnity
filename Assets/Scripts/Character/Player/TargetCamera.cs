@@ -13,7 +13,7 @@ public class TargetCamera : MonoBehaviour
 
         _camera.Init(playerSettings, input);
     }
-
+    //Get the attached camera to this target
     public PlayerCamera GetCamera()
     {
         return _camera;

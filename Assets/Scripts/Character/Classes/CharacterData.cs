@@ -9,5 +9,6 @@ namespace Character
     public struct CharacterData
     {
         public float HeadHeight;
+        public float SpeedMovement;
     }
 }

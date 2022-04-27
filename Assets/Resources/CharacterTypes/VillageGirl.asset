@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterData:
     HeadHeight: 1.75
+    SpeedMovement: 1.75

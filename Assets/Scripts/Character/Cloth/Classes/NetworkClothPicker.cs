@@ -49,11 +49,13 @@ namespace Character
             }
         }
 
+        //Get the key to pick cloth
         public KeyCode GetPickButton()
         {
             return _input.GetPickClothKeycode();
         }
 
+        //Set current cloth handler
         public void SetClothHandler(IClothHandler clothHandler)
         {
             _clothHandler = clothHandler;

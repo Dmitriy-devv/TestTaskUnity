@@ -8,17 +8,17 @@ namespace Character.SimpleMovement
 {
     public class SimpleNetworkMovement : MonoBehaviour, ICharacterMovement
     {
-        [SerializeField] private float testSpeed = 1.7f;
-        public float Speed { get => testSpeed; }
-
+        public float Speed { get => _speed;}
+        private float _speed;
         private IInput _input;
         private ISimpleMovementState _state;
         private bool _isInit = false;
 
-        public void Init(IInput input, ICharacter character)
+        public void Init(IInput input, ICharacter character, CharacterData data)
         {
             _input = input;
             _state = new IdleState(_input, character, this);
+            _speed = data.SpeedMovement;
             _isInit = true;
         }
 
