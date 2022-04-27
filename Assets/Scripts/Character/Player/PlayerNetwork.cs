@@ -43,7 +43,9 @@ namespace Character
                 Destroy(_characterController);
                 return;
             }
-            
+            var collider = gameObject.GetComponent<CapsuleCollider>();
+            Destroy(collider);
+
             var targetCamera = Instantiate(_targetCamera, transform);
             targetCamera.Init(_info.CharacterTypeSO.CharacterData, playerSettings, _input);
 

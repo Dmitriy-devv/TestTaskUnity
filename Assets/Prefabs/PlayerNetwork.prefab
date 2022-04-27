@@ -1427,6 +1427,7 @@ GameObject:
   - component: {fileID: -8931533393533520793}
   - component: {fileID: 1238260451431330523}
   - component: {fileID: 488149993895698368}
+  - component: {fileID: 7969614765948274973}
   m_Layer: 0
   m_Name: PlayerNetwork
   m_TagString: Untagged
@@ -1613,6 +1614,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!136 &7969614765948274973
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631623609978811956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1631623609978811957
 GameObject:
   m_ObjectHideFlags: 0
